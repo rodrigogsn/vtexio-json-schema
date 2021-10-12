@@ -143,14 +143,17 @@ O nome desse campo é uma **expressão regular** que permite que os blocos tenha
 
 - Algumas referências em json da vtex trazem o valor booleano `"true"` como string, em vez de `true`. Isso não é aceito pelas props, que entendem qualquer string como true, e podem acabar "bugando" algumas props, como as de borda e posicionamento. [Exemplo de uma referência com esse suposto equívoco](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-list#advanced-configuration).
 
-## Ideias
+## Ideias/Sugestões de Melhoria
 
-> As ideias implementadas serão estilizados com ~~um risco~~ e permanecem abaixo para manter histórico. Se necessário, virão acompanhadas da _hash_ de seu commit.
+> As ideias implementadas serão estilizados com ~~um risco~~ e permanecem abaixo para manter histórico. Se necessário, virão acompanhadas da _hash_ de seu commit/PR.
 
 - Transformar este schema em uma extensão pra não ser necessário lidar com o `settings.json`
 - Acessar a documentação por uma aba no VS Code, assim como a extensão [DevDocs](https://marketplace.visualstudio.com/items?itemName=Anan.devdocstab)
 - Criar também snippets com os blocos principais, além do schema, para agilizar ainda mais o desenvolvimento. Exemplo na extensão [VTEX IO Snippets](https://marketplace.visualstudio.com/items?itemName=brendonguedes.vtex-snippets). Guia do VS Code de como **criar snippets dentro do schema**, usando `defaultSnippets`: https://code.visualstudio.com/docs/languages/json
-- ~~Adicionar automaticamente os títulos (`title`) em blocos de layout responsivo, como `footer-layout` ou `responsive-layout`, para os blocos se organizarem no site editor.~~
+- ~~Adicionar automaticamente os títulos (`title`) em blocos de layout responsivo, como `footer-layout` ou `responsive-layout`, para os blocos se organizarem no Site Editor.~~
+- Separar `definitions` e `patternProperties`em diferentes arquivos para não sobrecarregar a IDE com o tamanho do json
+- Separar `definitions` em blocos menores (ex.: por tipo de componente), mesmo motivo do item anterior
+- Colocar nas descrições as imagens com exemplo de uso do componente, que já está presente em algumas documentações. [Exemplo aqui](https://user-images.githubusercontent.com/52087100/82367576-6d196800-99ea-11ea-9672-77fa2b90a581.gif).
 
 ## Progresso (50,7% - 104 de 205)
 
