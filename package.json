@@ -1,0 +1,13 @@
+{
+  "name": "vtexio-json-schema",
+  "version": "1.0.0",
+  "description": "JSON schema for VTEX IO Store Framework",
+  "main": "schema.json",
+  "repository": "https://github.com/rodrigogsn/vtexio-json-schema.git",
+  "author": "Digo Gomes <rodrigogsn@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.2.8",
+    "husky": "^7.0.2"
+  }
+}
