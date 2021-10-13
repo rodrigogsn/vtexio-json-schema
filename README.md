@@ -39,7 +39,7 @@ Além disso, as opções também serão sugeridas conforme se digita dentro do J
 
 # Contribuindo
 
-## Principal
+## 1. Principal
 
 O schema tem 3 campos principais:
 
@@ -49,9 +49,9 @@ O schema tem 3 campos principais:
 | `properties`        | Habilita o **autocomplete** de blocos. Precisa de um para cada definição de bloco.                                                                                                       |
 | `patternProperties` | Expressão regular que permite que os blocos sejam nomeados com identificadores, sem perder o autocomplete (Ex.: `flex-layout.row#meu-nome`). Precisa de um para cada definição de bloco. |
 
-## Criando blocos
+## 2. Criando blocos
 
-#### 1. Definindo blocos em `definitions`:
+#### Definindo blocos em `definitions`:
 
 É importante que os blocos e suas props contenham o `title` e um `markdownDescription` com **descrição** e os **tipos de valores** possíveis, assim como é mostrado na [documentação da VTEX](https://developers.vtex.com/).
 
@@ -102,7 +102,7 @@ Resultado ao posicionar o cursor na prop:
 
 ![Resultado ao posicionar o cursor na prop](https://i.imgur.com/RB0Bjto.png)
 
-#### 2. Configurando campo `properties`:
+#### Configurando campo `properties`:
 
 Para configurar, basta criar um objeto com o nome do bloco e referenciar a ele sua respectiva definição. Exemplo:
 
@@ -114,7 +114,7 @@ Para configurar, basta criar um objeto com o nome do bloco e referenciar a ele s
 
 Esse campo é responsável por ativar o autocomplete, então é importante que seu nome seja **exatamente igual** ao nome do bloco VTEX.
 
-#### 3. Configurando campo `patternProperties`:
+#### Configurando campo `patternProperties`:
 
 O nome desse campo é uma **expressão regular** que permite que os blocos tenham identificadores únicos. A expressão é do tipo `^nome-do-bloco#`. Isso significa que o schema valida um bloco que termine com um identificador depois do símbolo `#`.
 
@@ -123,6 +123,49 @@ O nome desse campo é uma **expressão regular** que permite que os blocos tenha
       "$ref": "#/definitions/flex-layout.row"
     },
 ```
+
+## 3. Git Flow e Padrão de Commits
+
+#### Git Flow
+
+Esse projeto foi preparado com **Git Flow**. Recomenda-se que uma branch seja criada a partir da branch `develop`, com o padrão `feature/nome-do-recurso`. Para isso, pode-se usar o seguinte comando no terminal:
+
+```
+git flow feature start nome-do-recurso
+```
+
+Quando concluir o trabalho de desenvolvimento no recurso, a próxima etapa é mesclar a ramificação de recurso na branch de desenvolvimento.
+
+```
+git flow feature finish nome-do-recurso
+```
+
+Para mais informações sobre o fluxo e **branches de hotfix**: https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow
+
+#### Git Commit Linter
+
+As mensagens de commits seguem o padrão [Conventional Commit](https://www.conventionalcommits.org), e são verificadas automaticamente pelo `git-commit-msg-linter`. Os tipos de commit possíveis são: **feat**, **fix**, **docs**, **style**, **refactor**, **test**, **chore**, **perf**, **ci**, **build** e **temp**. Exemplos de uso:
+
+❌ Não aceito:
+
+    Correct spelling of CHANGELOG.
+
+✅ Aceito:
+
+    docs: correct spelling of CHANGELOG
+
+✅ Aceito (recomendado, mensagem com escopo):
+
+    docs(CHANGELOG): correct spelling
+
+Para mais informações sobre Conventional Commit:
+
+- https://www.conventionalcommits.org
+- https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
+
+Repositório oficial de `git-commit-msg-linter`:
+
+- https://www.npmjs.com/package/git-commit-msg-linter
 
 ---
 
