@@ -1441,7 +1441,7 @@
             "showInColor": {
               "type": "boolean",
               "markdownDescription": "boolean\n\nWhether the icons are colored or not.",
-              "default": "false"
+              "default": false
             }
           }
         }
@@ -1477,8 +1477,8 @@
             },
             "showInColor": {
               "type": "boolean",
-              "markdownDescription": "boolean\n\nWhether the icons are colored or not",
-              "default": "false"
+              "markdownDescription": "`boolean`\n\nWhether the icons are colored or not",
+              "default": false
             }
           }
         }
@@ -1506,17 +1506,17 @@
             },
             "title": {
               "type": "string",
-              "markdownDescription": "string\n\nText to show above of list of links",
+              "markdownDescription": "`string`\n\nText to show above of list of links",
               "default": ""
             },
             "showInColor": {
               "type": "boolean",
-              "markdownDescription": "boolean\n\nWhether the icons are colored or not",
-              "default": "false"
+              "markdownDescription": "`boolean`\n\nWhether the icons are colored or not",
+              "default": false
             },
             "socialNetworks": {
               "type": "array",
-              "markdownDescription": "array\n\nArray of social networks. Possible values for `name`: `facebook`, `twitter`, `linkedin`, `youtube`, `pinterest`, `instagram`",
+              "markdownDescription": "`array`\n\nArray of social networks. Possible values for `name`: `facebook`, `twitter`, `linkedin`, `youtube`, `pinterest`, `instagram`",
               "default": [
                 { "url": "#", "name": "facebook" },
                 { "url": "#", "name": "twitter" },
