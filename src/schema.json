@@ -2794,6 +2794,14 @@
           "additionalProperties": false,
           "markdownDescription": "All available properties for this block.",
           "properties": {
+            "blockClass": {
+              "type": ["array", "string"],
+              "markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            },
             "attemptPageTypeSearch": {
               "type": "boolean",
               "markdownDescription": "`boolean`\n\nIf `true` when clicked on result link of brand, department or category will link to the corresponding brand, department or category page. When `false` will always go to a full text search page.",
