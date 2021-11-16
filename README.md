@@ -198,7 +198,9 @@ Repositório oficial de `git-commit-msg-linter`:
 - Separar `definitions` em blocos menores (ex.: por tipo de componente), mesmo motivo do item anterior
 - Colocar nas descrições as imagens com exemplo de uso do componente, que já está presente em algumas documentações. [Exemplo aqui](https://user-images.githubusercontent.com/52087100/82367576-6d196800-99ea-11ea-9672-77fa2b90a581.gif).
 
-## Progresso (50,7% - 104 de 205)
+## Progresso
+
+### (50,7% - 104 de 205)
 
 Lista com os componentes VTEX que podem ser customizados, e a indicação de quais já foram contemplados no schema.
 
@@ -346,7 +348,6 @@ Lista com os componentes VTEX que podem ser customizados, e a indicação de qua
 | product-selling-price-range    |        |
 | product-seller-name            |        |
 | product-price-suspense         |        |
-| product-quantity               | ✅     |
 
 | Search Result App                | Status |
 | -------------------------------- | ------ |
@@ -388,6 +389,7 @@ Lista com os componentes VTEX que podem ser customizados, e a indicação de qua
 | product-summary-name            | ✅     |
 | product-summary-sku-name        | ✅     |
 | product-summary-sku-selector    | ✅     |
+| product-quantity                | ✅     |
 
 | Advanced Components              | Status |
 | -------------------------------- | ------ |
