@@ -5527,7 +5527,10 @@
             "markers": {
               "type": "array",
               "markdownDescription": "`string[]`\n\nIDs of your choosing to identify the block's rendered text message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop.",
-              "default": []
+              "default": [],
+              "items": {
+                "type": "string"
+              }
             },
             "link": {
               "type": "string",
@@ -6646,6 +6649,47 @@
           }
         }
       }
+    },
+
+    "product-price:props": {
+      "type": "object",
+      "additionalProperties": false,
+      "markdownDescription": "All available properties for this block.",
+      "properties": {
+        "blockClass": {
+          "type": ["array", "string"],
+          "markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "message": {
+          "type": "string",
+          "markdownDescription": "`string`\n\nDefines the block's default text message to be rendered on the UI. You can also define which text message a block will render on the UI using the admin's Site Editor and the markers prop.",
+          "default": ""
+        },
+        "markers": {
+          "type": "array",
+          "markdownDescription": "`string[]`\n\nIDs of your choosing to identify the block's rendered text message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop.",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+
+    "product-list-price": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "Product Price (List)",
+      "markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-price\n\nRenders the product list price. If it is equal or lower than the product selling price, this block will not be rendered.\n\n**Message variables available:**\n\n`{listPriceValue}`\n\n`{listPriceWithTax}`\n\n`{listPriceWithUnitMultiplier}`\n\n`{taxPercentage}`\n\n`{taxValue}`\n\n`{hasMeasurementUnit}`\n\n`{taxValue}`\n\n`{hasUnitMultiplier}`\n\n`{unitMultiplier}`\n\n`\"vtex.product-price@1.x\"`",
+      "properties": {
+        "props": {
+          "$ref": "#/definitions/product-price:props"
+        }
+      }
     }
   },
 
@@ -6961,6 +7005,9 @@
     },
     "shelf.relatedProducts": {
       "$ref": "#/definitions/shelf.relatedProducts"
+    },
+    "product-list-price": {
+      "$ref": "#/definitions/product-list-price"
     }
   },
 
@@ -7276,6 +7323,9 @@
     },
     "^shelf.relatedProducts#": {
       "$ref": "#/definitions/shelf.relatedProducts"
+    },
+    "^product-list-price#": {
+      "$ref": "#/definitions/product-list-price"
     }
   }
 }
